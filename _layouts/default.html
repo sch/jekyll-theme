@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Adrian Schaedle" />
-    {% include title.html %}
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Adrian Schaedle</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -113,7 +113,7 @@
     {{ content }}
     <script>
       var script = document.createElement("script");
-      script.src = "js/bundle.js"
+      script.src = "assets/js/bundle.js"
       document.head.appendChild(script)
     </script>
   </body>
