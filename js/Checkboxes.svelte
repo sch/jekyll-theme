@@ -12,6 +12,7 @@
   let checkboxHeight = 16;
   let sampledDimensions = new Dimensions(10, 10);
   let canvas = emptyCanvas(10, 10);
+  let interval;
 
   $: if (mounted) {
     const containerDimensions = new Dimensions(clientWidth, clientHeight);
@@ -29,7 +30,7 @@
   }
 
   onMount(function() {
-    var interval = setInterval(tick, 1500);
+    interval = setInterval(tick, 1500);
 
     var el = document.querySelector(".js-Checkboxes");
 
@@ -48,11 +49,13 @@
     points = points.map(point => randomWalk(point, sampledDimensions));
   }
 
-  function addPoint(x: number, y: number) {
-    return function() {
-      var newPoint = new Point(x, y);
-      points.push(newPoint);
-    };
+  function addPoint(event) {
+    clearInterval(interval)
+    const x = parseInt(event.target.dataset.x, 10)
+    const y = parseInt(event.target.dataset.y, 10)
+    const newPoint = new Point(x, y);
+    points = [...points, newPoint];
+    interval = setInterval(tick, 1500);
   }
 </script>
 
@@ -116,7 +119,7 @@
   <div>
     {#each row as checked, x}
     <label class="Checkbox">
-      <input type="checkbox" {checked} on:change="{addPoint(x, y)}" />
+      <input type="checkbox" {checked} data-x={x} data-y={y} on:change={addPoint} />
     </label>
     {/each}
   </div>
