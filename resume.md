@@ -7,6 +7,7 @@ experience:
   items:
   - name: Job 1
     type: Subtitle
+    title: Position Title
     dates: Feburary 2017 to January 2041
     description: |
       Donec ac tellus purus. Aliquam id convallis lacus. Cras ac purus
@@ -16,6 +17,7 @@ experience:
       malesuada.
   - name: Job 2
     type: Subtitle
+    title: Position Title
     dates: Feburary 2017 to January 2041
     description: |
       Cras nec erat at ex pretium sollicitudin vel in orci. Fusce diam lorem,

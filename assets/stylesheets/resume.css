@@ -10,6 +10,10 @@
 
 body {
   margin: 0;
+  font-family: "ff-meta-serif-web-pro", Georgia;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #343434;
 }
 
 a {
@@ -53,10 +57,6 @@ a:visited {
   padding-left: 0.809em;
   padding-right: 0.809em;
   max-width: 60em;
-  font-family: "ff-meta-serif-web-pro", Georgia;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #343434;
 }
 
 .PrintMessage {
@@ -281,5 +281,18 @@ a:visited {
 
   .PrintMessage {
     display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #FFF;
+    background-color: #343434;
+  }
+
+  .Resume-email,
+  .Job-title,
+  .Dates {
+    color: #AAA;
   }
 }
