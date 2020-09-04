@@ -287,7 +287,9 @@ a:visited {
 @media (prefers-color-scheme: dark) {
   body {
     color: #FFF;
-    background-color: #343434;
+    background-color: #041526;
+    background: linear-gradient(#082450, #041526);
+    min-height: 100vh;
   }
 
   .Resume-email,
