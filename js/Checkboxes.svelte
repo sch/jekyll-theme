@@ -67,15 +67,6 @@
     height: 100%;
   }
 
-  .Info {
-    background-color: white;
-    z-index: 1;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px;
-  }
-
   .CheckboxCanvas div {
     margin: 0;
     line-height: 0;

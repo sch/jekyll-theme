@@ -2,7 +2,6 @@ import svelte from "rollup-plugin-svelte";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
-import replace from "@rollup/plugin-replace";
 import filesize from "rollup-plugin-bundle-size";
 import typescript from "@rollup/plugin-typescript";
 import autoPreprocess from "svelte-preprocess";
@@ -10,10 +9,10 @@ import autoPreprocess from "svelte-preprocess";
 const isProduction = !process.env.ROLLUP_WATCH;
 
 const plugins = [
-  svelte({ dev: !isProduction, preprocess: autoPreprocess() }),
+  svelte({ emitCss: false, preprocess: autoPreprocess() }),
   nodeResolve({ browser: true, dedupe: ["svelte"] }),
   commonjs(),
-  typescript({ sourceMap: !isProduction })
+  typescript({ sourceMap: true })
 ];
 
 if (isProduction) {
