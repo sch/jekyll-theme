@@ -20,11 +20,11 @@
   </head>
   <body>
     <div class="Resume">
-      <div class="PrintMessage">
-        This resume was generated from a web page available at<!-- -->
-        <a href="https://adrian.schaedle.me/resume">https://adrian.schaedle.me/resume</a>
-        . I encourage you to look at that version!
-      </div>
+      {% if page.print_message %}
+        <div class="PrintMessage">
+          {{ page.print_message | markdownify }}
+        </div>
+      {% endif %}
 
       <div class="Header clearfix">
         <div class="Resume-contact">
