@@ -2,6 +2,18 @@
 layout: default
 ---
 {{ content }}
+
+{% if site.notes %}
+  <section class="Portfolio">
+    <h2>Notes</h2>
+    {% for note in site.notes %}
+      <a href="{{note.url}}">
+        <div>{{note.title}}</div>
+        <p>{{note.excerpt | strip_html | truncatewords: 40, "..." }}</p>
+      </a>
+    {% endfor %}
+  </section>
+{% endif %}
 <script>
   var script = document.createElement("script");
   script.src = "/assets/js/bundle.js";

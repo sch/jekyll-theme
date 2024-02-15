@@ -1,0 +1,20 @@
+body {
+  background-color: #E4FAED;
+  color: #333;
+  margin-top: 200px;
+}
+
+main {
+  max-width: 45em;
+  margin: 0 auto;
+}
+
+article {
+  background-color: white;
+  padding: 2.618em;
+  border-radius: 2px;
+}
+
+h1 {
+  color: /* gold: rgb(185, 154, 84); or darker green: */ rgb(97, 178, 139);
+}
