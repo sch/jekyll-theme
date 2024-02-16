@@ -1,3 +1,7 @@
+html {
+  min-height: 100vh;
+}
+
 body {
   background-color: #E4FAED;
   color: #333;

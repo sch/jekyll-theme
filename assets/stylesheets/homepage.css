@@ -35,7 +35,6 @@
 .Portfolio {
   background-color: #F8F6F5;
   color: #333;
-  min-height: 100vh;
   scroll-snap-align: start;
   display: grid;
   grid-column-gap: 16px;
