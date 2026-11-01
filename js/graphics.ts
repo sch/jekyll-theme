@@ -124,7 +124,7 @@ const Directions = {
   UP: 0,
   RIGHT: 1,
   DOWN: 2,
-  LEFT: 3
+  LEFT: 3,
 };
 
 /**
@@ -137,15 +137,15 @@ export function randomWalk(point: Point, dimensions: Dimensions): Point {
     return new Point(point.x, point.y - 1);
   }
 
-  if (nextDirection === Directions.RIGHT && point.x < dimensions.width) {
+  if (nextDirection === Directions.RIGHT && point.x < dimensions.width - 1) {
     return new Point(point.x + 1, point.y);
   }
 
-  if (nextDirection === Directions.DOWN && point.y < dimensions.height) {
+  if (nextDirection === Directions.DOWN && point.y < dimensions.height - 1) {
     return new Point(point.x, point.y + 1);
   }
 
-  if (nextDirection === Directions.LEFT && point.x < dimensions.width) {
+  if (nextDirection === Directions.LEFT && point.x > 0) {
     return new Point(point.x - 1, point.y);
   }
 

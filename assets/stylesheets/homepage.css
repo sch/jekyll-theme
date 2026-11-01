@@ -17,7 +17,7 @@
   flex-shrink: 0;
 }
 
-.js-Checkboxes {
+checkbox-grid {
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 1 forwards;
 }
@@ -33,7 +33,7 @@
 }
 
 .Portfolio {
-  background-color: #F8F6F5;
+  background-color: #f8f6f5;
   color: #333;
   scroll-snap-align: start;
   display: grid;
@@ -52,7 +52,6 @@
   margin-top: 8px;
   margin-bottom: 8px;
 }
-
 
 .Portfolio img {
   border-radius: 4px;

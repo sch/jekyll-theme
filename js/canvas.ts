@@ -28,24 +28,16 @@ function height<T>(canvas: TwoDimensionalArray<T>): number {
 }
 
 function isWithinBounds(canvas: Canvas, point: Point): boolean {
-  return point.x < width(canvas) && point.y < height(canvas);
+  return (
+    point.x >= 0 && point.y >= 0 && point.y < height(canvas) && point.x < canvas[point.y].length
+  );
 }
 
-function combineCanvas(
-  bottomCanvas: Canvas,
-  topCanvas: Canvas,
-  offset = new Point(0, 0)
-): Canvas {
+function combineCanvas(bottomCanvas: Canvas, topCanvas: Canvas, offset = new Point(0, 0)): Canvas {
   for (let row = 0; row < topCanvas.length; row++) {
     for (let column = 0; column < topCanvas[row].length; column++) {
-      if (
-        isWithinBounds(
-          bottomCanvas,
-          new Point(column + offset.x, row + offset.y)
-        )
-      ) {
-        bottomCanvas[row + offset.y][column + offset.x] =
-          topCanvas[row][column];
+      if (isWithinBounds(bottomCanvas, new Point(column + offset.x, row + offset.y))) {
+        bottomCanvas[row + offset.y][column + offset.x] = topCanvas[row][column];
       }
     }
   }
@@ -66,13 +58,9 @@ function letterCanvas(letter: string): Canvas {
   return ALPHABET_MAP[letter[0].toUpperCase()];
 }
 
-export function drawText(
-  canvas: Canvas,
-  text: string,
-  offset = new Point(0, 0)
-): Canvas {
+export function drawText(canvas: Canvas, text: string, offset = new Point(0, 0)): Canvas {
   let xOffset = 0 + offset.x;
-  return text.split("").reduce(function(canvas, letter) {
+  return text.split("").reduce(function (canvas, letter) {
     const newOffset = new Point(xOffset, offset.y);
     const newCanvas = combineCanvas(canvas, letterCanvas(letter), newOffset);
     xOffset += width(letterCanvas(letter)) + 1;

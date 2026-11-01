@@ -1,24 +1,21 @@
 {
   "scripts": {
-    "build": "rollup --config",
+    "build": "vp build",
+    "check": "vp check",
+    "check:fix": "vp check --fix",
+    "format": "vp fmt",
+    "format:check": "vp fmt --check",
     "postinstall": "npm run build",
-    "typecheck": "tsc --noEmit && svelte-check",
-    "server": "rollup --config --watch"
+    "typecheck": "vp check --no-fmt --no-lint",
+    "server": "vp build --watch"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "14.0.0",
-    "@rollup/plugin-node-resolve": "8.4.0",
-    "@rollup/plugin-typescript": "^8.2.1",
-    "@tsconfig/svelte": "1.0.2",
-    "prettier": "1.18.2",
-    "prettier-plugin-svelte": "0.7.0",
-    "rollup": "^2.44.0",
-    "rollup-plugin-bundle-size": "^1.0.1",
-    "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "6.1.0",
-    "svelte": "^3.37.0",
-    "svelte-check": "^1.4.0",
-    "svelte-preprocess": "^4.7.0",
-    "typescript": "^4.2.4"
+    "vite-plus": "1.4.0"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0"
+  },
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
   }
 }

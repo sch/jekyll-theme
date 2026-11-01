@@ -1,9 +1,3 @@
-import Checkboxes from "./Checkboxes.svelte";
+import { CheckboxGrid } from "./checkbox-grid";
 
-const target = document.querySelector(".js-Checkboxes");
-
-const checkboxes = new Checkboxes({
-  target: target
-});
-
-export default checkboxes
+customElements.define("checkbox-grid", CheckboxGrid);
