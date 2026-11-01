@@ -87,12 +87,14 @@ export class CheckboxGrid extends HTMLElement {
       bitmap = drawText(bitmap, "adrian", new Point(2, 2));
       bitmap = drawText(bitmap, "schaedle", new Point(2, 9));
     }
-    this.points.forEach((point) => flipBit(bitmap, point.x, point.y));
-    this.inputs.forEach((row, y) =>
-      row.forEach((input, x) => {
+    for (const point of this.points) {
+      flipBit(bitmap, point.x, point.y);
+    }
+    for (const [y, row] of this.inputs.entries()) {
+      for (const [x, input] of row.entries()) {
         input.checked = bitmap[y][x];
-      }),
-    );
+      }
+    }
   }
 
   // Rebuild the grid on resize
