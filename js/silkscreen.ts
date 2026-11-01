@@ -3,7 +3,7 @@ export const A = [
   [true, false, false, true],
   [true, true, true, true],
   [true, false, false, true],
-  [true, false, false, true]
+  [true, false, false, true],
 ];
 
 export const B = [
@@ -11,7 +11,7 @@ export const B = [
   [true, false, false, true],
   [true, true, true, true],
   [true, false, false, true],
-  [true, true, true, false]
+  [true, true, true, false],
 ];
 
 export const C = [
@@ -19,7 +19,7 @@ export const C = [
   [true, false, false, true],
   [true, false, false, false],
   [true, false, false, true],
-  [false, true, true, false]
+  [false, true, true, false],
 ];
 
 export const D = [
@@ -27,7 +27,7 @@ export const D = [
   [true, false, false, true],
   [true, false, false, true],
   [true, false, false, true],
-  [true, true, true, false]
+  [true, true, true, false],
 ];
 
 export const E = [
@@ -35,7 +35,7 @@ export const E = [
   [true, false, false],
   [true, true, true],
   [true, false, false],
-  [true, true, true]
+  [true, true, true],
 ];
 
 export const F = [
@@ -43,7 +43,7 @@ export const F = [
   [true, false, false],
   [true, true, true],
   [true, false, false],
-  [true, false, false]
+  [true, false, false],
 ];
 
 export const G = [
@@ -51,7 +51,7 @@ export const G = [
   [true, false, false, false],
   [true, false, true, true],
   [true, false, false, true],
-  [false, true, true, false]
+  [false, true, true, false],
 ];
 
 export const H = [
@@ -59,7 +59,7 @@ export const H = [
   [true, false, false, true],
   [true, true, true, true],
   [true, false, false, true],
-  [true, false, false, true]
+  [true, false, false, true],
 ];
 
 export const I = [[true], [true], [true], [true], [true]];
@@ -69,7 +69,7 @@ export const J = [
   [false, false, false, true],
   [false, false, false, true],
   [true, false, false, true],
-  [false, true, true, false]
+  [false, true, true, false],
 ];
 
 export const K = [
@@ -77,7 +77,7 @@ export const K = [
   [true, false, true, false],
   [true, true, false, false],
   [true, false, true, false],
-  [true, false, false, true]
+  [true, false, false, true],
 ];
 
 export const L = [
@@ -85,7 +85,7 @@ export const L = [
   [true, false, false],
   [true, false, false],
   [true, false, false],
-  [true, true, true]
+  [true, true, true],
 ];
 
 export const M = [
@@ -93,7 +93,7 @@ export const M = [
   [true, true, false, true, true],
   [true, false, true, false, true],
   [true, false, false, false, true],
-  [true, false, false, false, true]
+  [true, false, false, false, true],
 ];
 
 export const N = [
@@ -101,7 +101,7 @@ export const N = [
   [true, true, false, false, true],
   [true, false, true, false, true],
   [true, false, false, true, true],
-  [true, false, false, false, true]
+  [true, false, false, false, true],
 ];
 
 export const O = [
@@ -109,7 +109,7 @@ export const O = [
   [true, false, false, false, true],
   [true, false, false, false, true],
   [true, false, false, false, true],
-  [false, true, true, true, false]
+  [false, true, true, true, false],
 ];
 
 export const P = [
@@ -117,7 +117,7 @@ export const P = [
   [true, false, false, true],
   [true, true, true, false],
   [true, false, false, false],
-  [true, false, false, false]
+  [true, false, false, false],
 ];
 
 export const Q = [
@@ -126,7 +126,7 @@ export const Q = [
   [true, false, false, true],
   [true, false, false, true],
   [false, true, true, false],
-  [false, false, false, true]
+  [false, false, false, true],
 ];
 
 export const R = [
@@ -134,7 +134,7 @@ export const R = [
   [true, false, false, true],
   [true, true, true, false],
   [true, false, true, false],
-  [true, false, false, true]
+  [true, false, false, true],
 ];
 
 export const S = [
@@ -142,7 +142,7 @@ export const S = [
   [true, false, false, false],
   [false, true, true, false],
   [false, false, false, true],
-  [true, true, true, false]
+  [true, true, true, false],
 ];
 
 export const T = [
@@ -150,7 +150,7 @@ export const T = [
   [false, true, false],
   [false, true, false],
   [false, true, false],
-  [false, true, false]
+  [false, true, false],
 ];
 
 export const U = [
@@ -158,7 +158,7 @@ export const U = [
   [true, false, false, true],
   [true, false, false, true],
   [true, false, false, true],
-  [false, true, true, false]
+  [false, true, true, false],
 ];
 
 export const V = [
@@ -166,7 +166,7 @@ export const V = [
   [true, false, false, false, true],
   [false, true, false, true, false],
   [false, true, false, true, false],
-  [false, false, true, false, false]
+  [false, false, true, false, false],
 ];
 
 export const W = [
@@ -174,7 +174,7 @@ export const W = [
   [true, false, true, false, true],
   [true, false, true, false, true],
   [true, false, true, false, true],
-  [false, true, false, true, false]
+  [false, true, false, true, false],
 ];
 
 export const X = [
@@ -182,7 +182,7 @@ export const X = [
   [false, true, false, true, false],
   [false, false, true, false, false],
   [false, true, false, true, false],
-  [true, false, false, false, true]
+  [true, false, false, false, true],
 ];
 
 export const Y = [
@@ -190,7 +190,7 @@ export const Y = [
   [false, true, false, true, false],
   [false, false, true, false, false],
   [false, false, true, false, false],
-  [false, false, true, false, false]
+  [false, false, true, false, false],
 ];
 
 export const Z = [
@@ -198,7 +198,7 @@ export const Z = [
   [false, false, true],
   [false, true, false],
   [true, false, false],
-  [true, true, true]
+  [true, true, true],
 ];
 
 export const ALPHABET_MAP: Record<string, Array<Array<boolean>>> = {
@@ -227,7 +227,7 @@ export const ALPHABET_MAP: Record<string, Array<Array<boolean>>> = {
   W: W,
   X: X,
   Y: Y,
-  Z: Z
+  Z: Z,
 };
 
 export const ALPHABET_ARRAY = [
@@ -256,5 +256,5 @@ export const ALPHABET_ARRAY = [
   W,
   X,
   Y,
-  Z
+  Z,
 ];

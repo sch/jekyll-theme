@@ -286,7 +286,7 @@ a:visited {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #FFF;
+    color: #fff;
     background-color: #041526;
     background: linear-gradient(#082450, #041526);
     min-height: 100vh;
@@ -295,6 +295,6 @@ a:visited {
   .Resume-email,
   .Job-title,
   .Dates {
-    color: #AAA;
+    color: #aaa;
   }
 }

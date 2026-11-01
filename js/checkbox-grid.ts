@@ -53,29 +53,17 @@ export class CheckboxGrid extends HTMLElement {
   handleEvent(event: Event) {
     const input = event.target;
     if (!(input instanceof HTMLInputElement)) return;
-    this.points = [
-      ...this.points,
-      new Point(Number(input.dataset.x), Number(input.dataset.y)),
-    ];
+    this.points = [...this.points, new Point(Number(input.dataset.x), Number(input.dataset.y))];
     this.render();
     this.restartTimer();
   }
 
   private resize() {
-    if (
-      !this.isConnected ||
-      !this.sample.clientWidth ||
-      !this.sample.clientHeight
-    )
-      return;
-    const dimensions = new Dimensions(
-      this.canvas.clientWidth,
-      this.canvas.clientHeight,
-    ).sample(new Dimensions(this.sample.clientWidth, this.sample.clientHeight));
-    if (
-      dimensions.width === this.dimensions.width &&
-      dimensions.height === this.dimensions.height
-    )
+    if (!this.isConnected || !this.sample.clientWidth || !this.sample.clientHeight) return;
+    const dimensions = new Dimensions(this.canvas.clientWidth, this.canvas.clientHeight).sample(
+      new Dimensions(this.sample.clientWidth, this.sample.clientHeight),
+    );
+    if (dimensions.width === this.dimensions.width && dimensions.height === this.dimensions.height)
       return;
     this.dimensions = dimensions;
     this.reconcileInputs();
@@ -84,9 +72,7 @@ export class CheckboxGrid extends HTMLElement {
   }
 
   private tick() {
-    this.points = this.points.map((point) =>
-      randomWalk(point, this.dimensions),
-    );
+    this.points = this.points.map((point) => randomWalk(point, this.dimensions));
     this.render();
   }
 
