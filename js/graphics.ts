@@ -17,6 +17,10 @@ export class Dimensions {
     this.height = height;
   }
 
+  equals(dimensions: Dimensions) {
+    return this.width === dimensions.width && this.height === dimensions.height;
+  }
+
   clamp(containingDimensions: Dimensions): Dimensions {
     const width = clamp(0, containingDimensions.width, this.width);
     const height = clamp(0, containingDimensions.height, this.height);

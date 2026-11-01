@@ -63,8 +63,7 @@ export class CheckboxGrid extends HTMLElement {
     const dimensions = new Dimensions(this.canvas.clientWidth, this.canvas.clientHeight).sample(
       new Dimensions(this.sample.clientWidth, this.sample.clientHeight),
     );
-    if (dimensions.width === this.dimensions.width && dimensions.height === this.dimensions.height)
-      return;
+    if (dimensions.equals(this.dimensions)) return;
     this.dimensions = dimensions;
     this.reconcileInputs();
     this.render();
