@@ -2,14 +2,12 @@ collections:
   notes:
     output: true
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
       type: "notes"
     values:
